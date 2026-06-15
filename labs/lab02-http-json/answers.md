@@ -1,0 +1,5 @@
+1. TCP messages can take whatever format they desire, they in essence are just raw bytes. HTTP requests have specific standardized formatting embedded in it, such as methods, headers, statuscodes, etc.
+2. It informs the server that the expected information is going to be json, that way the server can appropriately expect to parse it that way.
+3. The status codes are a flag to the client that that something has gone wrong, or correct. This allows the client to react appropriately to situations without having to figure out what went wrong, it basically just gives you an flag to start looking. 
+4. If malformed json is sent, then it gets handled through try/catch blocks and sends a 400 Bad Request if it cannot parse the information. 
+5. Lab 1 was a simple TCP exercise, Lab 2 is meant to introduce you to HTTP formatting and rules, and give an introduction to json formats.
