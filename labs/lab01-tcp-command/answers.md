@@ -1,0 +1,4 @@
+1. The server handles connection attempts made by clients, it does not initiate them. Clients are responsible for initiating handshakes/connections with a server. 
+2. A server that closes down after the first request would not be very useful. If it closed after the request, it would not be able to handle any incoming requests. 
+3. Generally, every client would be handled one at a time. Unless there is concurrency implemented for the server, in which case multiple clients could be handled simultaneously. 
+4. HTTP is more of a higher level. It works at the application layer, whereas the TCP works at the transport layer. TCP is more of a conveyor belt and HTTP is the actual factory, in other words.
